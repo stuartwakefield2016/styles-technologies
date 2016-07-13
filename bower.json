@@ -1,0 +1,24 @@
+{
+  "name": "stuartwakefield2016-styles-technologies",
+  "authors": [
+    "Stuart Wakefield <me@stuartwakefield.co.uk>"
+  ],
+  "description": "The styling for technologies for Stuart Wakefield v2016 website.",
+  "main": "technologies.css",
+  "moduleType": [],
+  "keywords": [
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "http://stuartwakefield.co.uk",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "stuartwakefield2016-styles-base": "~0.1.0"
+  }
+}

@@ -1,0 +1,56 @@
+.technologies ul {
+  padding: 0 2em 3em;
+  max-width: 35em;
+  font-size: 0.75em;
+}
+
+.technologies li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin-right: 5em;
+}
+
+.technologies li:nth-child(2n) {
+  top: 3em;
+  margin-left: -6em;
+  margin-right: -1em;
+  position: relative;
+
+}
+
+.technologies li a {
+  width: 6em;
+  height: 6em;
+  display: block;
+  color: #FFFFFF;
+  border: none;
+  white-space: nowrap;
+  background: url("images/hex.svg") no-repeat center;
+  transition: background 0.25s linear, color 0.25s linear;
+  outline: none;
+}
+
+.technologies li a:hover,
+.technologies li a:focus {
+  background-image: url("images/hex-hover.svg");
+  color: #0F233E;
+}
+
+.technologies li a::after {
+  display: none;
+}
+
+.technologies li a::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  vertical-align: middle;
+}
+
+.technologies li span {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+}
