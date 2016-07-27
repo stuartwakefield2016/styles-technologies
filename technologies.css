@@ -1,20 +1,22 @@
 .technologies ul {
   padding: 0 2em 3em;
-  max-width: 35em;
+  max-width: 40em;
   font-size: 0.75em;
 }
 
 .technologies li {
+  position: relative;
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  margin-right: 5em;
+  margin-right: 6em;
+  margin-bottom: 1em;
 }
 
 .technologies li:nth-child(2n) {
   top: 3em;
   margin-left: -6em;
-  margin-right: -1em;
+  margin-right: 0;
   position: relative;
 
 }
@@ -22,23 +24,56 @@
 .technologies li a {
   width: 6em;
   height: 6em;
+  position: relative;
   display: block;
   color: #FFFFFF;
   border: none;
   white-space: nowrap;
-  background: url("images/hex.svg") no-repeat center;
-  transition: background 0.25s linear, color 0.25s linear;
   outline: none;
+}
+
+.technologies li a::after,
+.technologies li::after {
+  top: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.technologies li::after {
+  z-index: -2;
+}
+
+.technologies li a::after {
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}
+
+.technologies li::after {
+  background: url('images/hex.svg') no-repeat top center/auto 200%;
+}
+
+.technologies li a::after {
+  background: url('images/hex.svg') no-repeat bottom center/auto 200%;
 }
 
 .technologies li a:hover,
 .technologies li a:focus {
-  background-image: url("images/hex-hover.svg");
+  background-image: none;
   color: #0F233E;
 }
 
+.technologies li a:hover::after,
+.technologies li a:focus::after {
+  opacity: 1;
+}
+
 .technologies li a::after {
-  display: none;
+  border-bottom: none;
+  transform: none;
 }
 
 .technologies li a::before {
